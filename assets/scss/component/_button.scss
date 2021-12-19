@@ -1,0 +1,43 @@
+.btn-1 {
+  padding: 15px 40px;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: $main-color;
+  color: #fff;
+  transition: 0.4s;
+  &:hover {
+    color: #fff;
+    background-color: $color-2;
+  }
+}
+.btn-2 {
+  padding: 12px 35px;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  position: relative;
+  transition: 0.4s;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 101%;
+    height: 100%;
+    border-radius: 3.5px;
+    background-color: $main-color;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.4s;
+  }
+  &:hover {
+    color: #fff;
+    border-color: $main-color;
+    &::before {
+      transform: scale(1);
+    }
+  }
+}

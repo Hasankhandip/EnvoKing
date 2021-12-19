@@ -1,0 +1,123 @@
+// header scss start
+.header-bottom {
+  box-shadow: 0px 5px 15px 0px rgba(196, 203, 255, 0.3);
+  background-color: #00102a;
+}
+.header-logo {
+  font-family: $jost;
+  color: #fff !important;
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  span {
+    color: $main-color;
+  }
+}
+.header-logo-icon {
+  height: 60px;
+  margin-right: 8px;
+}
+.navbar {
+  padding: 0;
+}
+.navbar-nav {
+  margin-right: 40px;
+}
+.navbar-collapse {
+  justify-content: end;
+}
+.nav-link {
+  position: relative;
+  font-family: $jost;
+  font-size: 18px;
+  color: #fff !important;
+  font-weight: 500;
+  transition: 0.4s;
+  padding: 35px 25px !important;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: $main-color;
+    transition: 0.4s;
+  }
+  &:hover {
+    color: $main-color !important;
+    &::before {
+      width: 100%;
+    }
+  }
+  &.active {
+    color: $main-color !important;
+    font-weight: 600;
+    &::before {
+      width: 100%;
+    }
+  }
+}
+.header-search-bar {
+  position: relative;
+  margin-right: 10px;
+}
+.header-search-bar-input {
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-family: $jost;
+  width: 270px;
+  border-color: transparent;
+  background-color: #f5f5f5;
+}
+.header-search-bar-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  font-size: 25px;
+  transform: rotateY(180deg) translateY(-50%);
+}
+.category {
+  color: #444;
+  padding: 30px 15px;
+  text-align: right;
+  &:hover {
+    color: #444 !important;
+  }
+  i {
+    font-size: 30px;
+  }
+}
+.header-top {
+  padding: 15px 0;
+  background-color: $main-color;
+}
+.header-top-details {
+  margin-right: 30px;
+  color: #fff;
+  a {
+    color: rgb(240, 240, 240);
+    font-family: $jost;
+    transition: 0.4s;
+    &:hover {
+      color: #fff;
+    }
+  }
+  i {
+    margin-right: 5px;
+  }
+}
+.header-top-details-item {
+  margin-right: 10px;
+  a {
+    i {
+      font-size: 15px;
+      transition: 0.4s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+// header scss end
