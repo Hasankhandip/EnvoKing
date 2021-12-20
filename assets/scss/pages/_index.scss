@@ -75,12 +75,12 @@
     &.prev {
       position: absolute;
       font-size: 28px;
-      left: -70px;
+      left: -100px;
     }
     &.next {
       position: absolute;
       font-size: 28px;
-      right: -70px;
+      right: -100px;
     }
   }
   .slick-dots {
@@ -91,6 +91,7 @@
 
 // about-features-section scss start
 .about-features-item-area {
+  // background-color: $color-2;
   padding: 80px 30px;
   border-radius: 5px;
   box-shadow: 0px 25px 70px 0px rgba(152, 152, 153, 0.5);
@@ -102,11 +103,13 @@
   }
 }
 .about-features-title {
+  // color: #fff;
   margin-bottom: 10px;
   margin: 25px 0;
 }
 .about-features-title-details {
   font-size: 18px;
+  // color: #edf3fb;
 }
 // about-features-section scss end
 
@@ -155,7 +158,7 @@
 
 // section title scss start
 .section-title-area {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .section-title-top {
   position: relative;
@@ -226,6 +229,7 @@
   background-color: #fff;
   border-radius: 50%;
   transition: 0.4s;
+  box-shadow: 0px 0px 20px 0px rgba(202, 202, 202, 0.432);
 }
 .service-item-btn {
   display: flex;
@@ -328,3 +332,181 @@
   height: 150px;
 }
 // book-section scss end
+
+// team-section scss start
+.team-section {
+  padding-top: 115px;
+  padding-bottom: 115px;
+}
+.member-item {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: $color-2;
+    transform: scale(0);
+    transition: 0.4s;
+  }
+  &:hover {
+    .member-social {
+      right: -66px;
+    }
+    &::before {
+      transform: scale(1);
+    }
+  }
+}
+.member-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.member-details {
+  padding: 20px;
+  text-align: center;
+}
+.memeber-title {
+  margin-bottom: 5px;
+}
+.member-social {
+  position: absolute;
+  right: -123px;
+  top: 135px;
+  display: flex;
+  padding: 15px 30px;
+  background-color: $color-2;
+  transform: rotate(-90deg);
+  transition: 0.4s;
+}
+.member-social-link {
+  margin-right: 20px;
+  color: #fff;
+  transform: rotate(90deg);
+}
+// team-section scss end
+
+// case-study-section scss start
+.case-study-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: $main-color;
+  margin-bottom: 200px;
+  .btn-1 {
+    margin-top: 20px;
+    background-color: #fff;
+    color: $color-2;
+    transition: 0.4s;
+    &:hover {
+      color: #fff;
+      background-color: $color-2;
+    }
+  }
+}
+.case-hdr {
+  color: #fff;
+}
+.case-title {
+  color: #fff;
+}
+.case-study-section {
+  .container-fluid {
+    .row {
+      .col-lg-3 {
+        padding: 2px;
+      }
+    }
+  }
+}
+.case-study-hdr-title {
+  margin-bottom: 85px;
+}
+.case-study-details {
+  position: absolute;
+  left: 0;
+  bottom: -25%;
+  padding: 0 25px;
+}
+.case-study-item {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    background: linear-gradient(180deg, transparent, #002434);
+    transition: 0.4s;
+  }
+}
+.case-text {
+  position: absolute;
+  bottom: 8%;
+  left: 10%;
+  transition: 0.4s;
+}
+.case-title {
+  color: #fff;
+  margin-bottom: 5px;
+}
+.case-link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.4s;
+  &:hover {
+    color: $main-color;
+  }
+}
+.team-title-hdr {
+  .section-title {
+    color: #fff;
+  }
+  .section-title-top {
+    &::before {
+      background-color: #fff;
+    }
+  }
+}
+// case-study-section scss end
+
+//blog-section scss start
+.blog-section {
+  padding-bottom: 115px;
+}
+.blog-item {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  &::before {
+    background-color: $main-color !important;
+  }
+}
+.blog-details {
+  padding: 20px;
+}
+.blog-post-details {
+  color: #414141;
+  margin-bottom: 20px;
+  i {
+    color: $main-color;
+  }
+  span {
+    margin: 0 10px;
+  }
+}
+.blog-title {
+  transition: 0.4s;
+  &:hover {
+    color: $main-color;
+  }
+}
+//blog-section scss end
