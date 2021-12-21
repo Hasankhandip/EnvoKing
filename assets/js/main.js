@@ -1,3 +1,18 @@
+// preloader start
+$(window).on("load", function () {
+  $(".holder")
+    .delay(500)
+    .animate(
+      {
+        opacity: "0",
+      },
+      500,
+      function () {
+        $(".holder").css("display", "none");
+      }
+    );
+});
+// preloader end
 // header-section
 $(window).on("scroll", function(){
   if ($(this).scrollTop() > 170 ) {
@@ -39,3 +54,18 @@ $(document).ready(function(){
       nextArrow: '<a href="#0" class="next"><i class="las la-long-arrow-alt-right"></i></a>',
     });
   });
+
+// odometer js start
+(function() {
+  $(".overview-counter-up").each(function () {
+      $(this).isInViewport(function(status) {
+          if (status === "entered") {
+              for( var i=0; i < document.querySelectorAll(".odometer").length; i++ ){
+                  var el = document.querySelectorAll('.odometer')[i];
+                  el.innerHTML = el.getAttribute("data-odometer-final");
+              }
+          }
+      });
+  });
+})();
+// odometer js end

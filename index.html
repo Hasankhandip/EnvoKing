@@ -11,12 +11,30 @@
     <link rel="stylesheet" href="assets/css/font-awesome.all.min.css" />
     <!-- line-awesome css -->
     <link rel="stylesheet" href="assets/css/line-awesome.min.css" />
+    <!-- odometer css -->
+    <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
     <!-- slick slider -->
     <link rel="stylesheet" href="assets/css/slick.css" />
     <!-- main css -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- Page preloader start-->
+    <div class="holder">
+      <div class="preloader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- page preloader end -->
     <!-- scroll to top start -->
     <button type="button" class="scroll-top">
       <i class="las la-space-shuttle"></i>
@@ -230,12 +248,15 @@
               seieiusmoed dui too consecteture elite more.According to ipsum
               dolor seat ameat consecteture elite.
             </p>
-            <div class="row">
+            <div class="row overview-counter-up">
               <div class="col-lg-4">
                 <div class="about-details">
                   <div class="about-details-wrap">
                     <i class="las la-grin-stars"></i>
-                    <h4><span>1241</span>+</h4>
+                    <h4>
+                      <span class="odometer" data-odometer-final="1241">0</span
+                      >+
+                    </h4>
                   </div>
                   <p>Project Completed</p>
                 </div>
@@ -244,7 +265,9 @@
                 <div class="about-details">
                   <div class="about-details-wrap">
                     <i class="las la-user-tie"></i>
-                    <h4><span>32</span>+</h4>
+                    <h4>
+                      <span class="odometer" data-odometer-final="32">0</span>+
+                    </h4>
                   </div>
                   <p>Team Members</p>
                 </div>
@@ -253,7 +276,9 @@
                 <div class="about-details">
                   <div class="about-details-wrap">
                     <i class="lab la-gratipay"></i>
-                    <h4><span>986</span>+</h4>
+                    <h4>
+                      <span class="odometer" data-odometer-final="986">0</span>+
+                    </h4>
                   </div>
                   <p>Team Members</p>
                 </div>
@@ -857,10 +882,12 @@
     <script src="assets/js/bootstrap.js"></script>
     <!-- jquery js -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- slick slider -->
     <script src="assets/js/slick.min.js"></script>
-    <!-- tilt js -->
-    <script src="assets/js/tilt.jquery.js"></script>
+    <!-- odometer js -->
+    <script src="assets/js/isInViewport.jquery.js"></script>
+    <script src="assets/js/odometer.js"></script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
   </body>
